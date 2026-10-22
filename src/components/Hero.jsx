@@ -58,10 +58,10 @@ export default function Hero() {
               hi: 'राजा फ़ूड्स अपने फ़ार्म पर स्वस्थ ब्रॉयलर पालता है और उन्हें ज़िलों व चिकन दुकानों को ज़िंदा, और राजा ब्रॉयलर्स के ज़रिए होटलों व घरों को ताज़ा कटा पहुँचाता है।',
             })}
           </motion.p>
-          <motion.div {...fade(0.24)} className="mt-6 grid grid-cols-2 gap-2 sm:mt-8 sm:flex sm:flex-wrap sm:gap-3">
+          <motion.div {...fade(0.24)} className="mt-6 grid gap-2.5 min-[420px]:grid-cols-2 sm:mt-8 sm:flex sm:flex-wrap sm:gap-3">
             <a href={waLink('Namaste Raja Foods, I would like to place an order.')} target="_blank" rel="noreferrer" className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-brand px-4 text-[14px] font-bold text-white shadow-[0_12px_28px_-10px_rgb(155_28_28/0.8)] transition hover:bg-brand-d sm:h-auto sm:px-6 sm:py-3.5 sm:text-[15.5px]">
               <WAIcon className="size-5" />
-              {tx({ en: 'Order on WhatsApp', hi: 'WhatsApp ऑर्डर' })}
+              {tx({ en: 'Order on WhatsApp', hi: 'WhatsApp पर ऑर्डर' })}
             </a>
             <a href="#businesses" className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white px-4 text-[14px] font-bold text-ink ring-1 ring-line transition hover:ring-ink/30 sm:h-auto sm:px-6 sm:py-3.5 sm:text-[15.5px]">
               {tx({ en: 'Our 4 businesses', hi: 'हमारे 4 व्यवसाय' })}
