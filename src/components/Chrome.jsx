@@ -8,11 +8,10 @@ import { NAV, BUSINESSES } from '../content.js'
 export function Logo({ light }) {
   return (
     <a href="#top" className="flex items-center gap-2" aria-label="Raja Foods home">
-      <svg viewBox="0 0 64 64" className="size-8 shrink-0 sm:size-10">
-        <rect width="64" height="64" rx="16" fill="#9b1c1c" />
-        <path d="M14 44V22l9 8 9-12 9 12 9-8v22z" fill="#e3a32f" />
-        <rect x="14" y="46" width="36" height="5" rx="2" fill="#fdf1d8" />
-      </svg>
+      {/* the maroon mark needs a light plate on the dark footer */}
+      <span className={light ? 'grid size-10 shrink-0 place-items-center rounded-xl bg-paper sm:size-12' : 'shrink-0'}>
+        <img src="/logo-mark.svg" alt="" className={light ? 'h-8 w-auto sm:h-10' : 'h-10 w-auto sm:h-12'} />
+      </span>
       <span className="leading-none">
         <span className={`block font-display text-[17px] font-extrabold tracking-tight sm:text-[21px] ${light ? 'text-white' : 'text-ink'}`}>Raja Foods</span>
         <span className={`mt-0.5 hidden text-[10px] font-semibold uppercase tracking-[0.18em] sm:block ${light ? 'text-white/55' : 'text-muted'}`}>Farm · Wholesale · Broilers</span>
