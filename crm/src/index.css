@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  /* warm off-white workspace, dark espresso sidebar, Raja maroon + turmeric gold as the brand pair */
+  --color-page: #f6f3ee;
+  --color-surface: #ffffff;
+  --color-ink: #1c1512;
+  --color-ink-2: #3d332d;
+  --color-muted: #7a6f66;
+  --color-line: #ebe5dc;
+  --color-grid: #eeeae3;
+  --color-axis: #cfc8bc;
+  --color-night: #1c1512;
+  --color-night-2: #2a211c;
+  --color-brand: #9b1c1c;
+  --color-brand-d: #7d1515;
+  --color-brand-l: #fbeeee;
+  --color-gold: #d6962a;
+  --color-gold-l: #fdf3e1;
+
+  --color-good: #0ca30c;
+  --color-good-d: #006300;
+  --color-good-l: #e7f6e7;
+  --color-warn: #fab219;
+  --color-warn-d: #8a5a00;
+  --color-warn-l: #fff3d6;
+  --color-crit: #d03b3b;
+  --color-crit-d: #a32424;
+  --color-crit-l: #fdeaea;
+  --color-sky-d: #1c5cab;
+  --color-sky-l: #e8f1fc;
+
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html, body {
+  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #d8d0c4; border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+
+select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%237a6f66' stroke-width='2.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.6rem center; }
+
+/* printable invoice / statement: only the .print-area is shown */
+@media print {
+  body * { visibility: hidden; }
+  .print-area, .print-area * { visibility: visible; }
+  .print-area { position: fixed; inset: 0; padding: 24px; background: white; }
+  .no-print { display: none !important; }
+}
